@@ -1,0 +1,21 @@
+{% extends 'ToDoApp/base.html' %}
+
+{% block title %}
+    {{task_detail.title}}
+{% endblock %}
+
+{% block content %}
+    <div class="container text-center translate-y-1/4 bg-gray-500 rounded  w-2/3 shadow-lg text-purple-300 ">
+        <div class="details leading-loose p-3">
+            <strong class="text-2xl text-white">Name of task:</strong> <br><p>{{task_detail.title}}</p>
+            <strong class="text-2xl text-white">Date created:</strong> <br><p>{{task_detail.created_at}}</p>
+            <strong class="text-2xl text-white">Task Due:</strong> <br><p>{{task_detail.due | timeuntil }}</p>
+            <strong class="text-2xl text-white">About task:</strong> <br><p>{{task_detail.description}}</p>
+            <strong class="text-2xl text-white">Tools required for task:</strong> <br><p>{{task_detail.tools}}</p>
+            <strong class="text-2xl text-white">What to achieve from task:</strong><br> <p>{{task_detail.endgoal}}</p><br>
+            <a href="{% url 'ToDoApp:update' slug=task_detail.slug %}" class="btn btn-warning">Update</a>
+            <a href="{% url 'ToDoApp:delete' slug=task_detail.slug %}" class="btn btn-danger">Delete</a>
+        </div>
+    </div>
+    
+{% endblock %}

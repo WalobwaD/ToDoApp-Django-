@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Bebas+Neue&family=Comfortaa:wght@300;400;500;600;700&family=Rubik+Distressed&family=Silkscreen&display=swap");
+body {
+  background-color: aliceblue;
+  overflow-x: hidden;
+}
+body .nav {
+  font-family: "Comfortaa", cursive;
+}
+body .title {
+  font-family: "Aboreto", cursive;
+}
+body .dates {
+  font-family: "Aboreto", cursive;
+}
+body .details p {
+  font-family: "Aboreto", cursive;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=main.css.map */

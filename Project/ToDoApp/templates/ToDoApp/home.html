@@ -1,0 +1,28 @@
+{% extends 'ToDoApp/base.html' %}
+
+{% block content %}
+    <div>
+        <input type="text" class="form-control absolute top-20 left-1/4 w-1/2" placeholder="search task">
+    </div>
+    <div class="container   p-3 bg-gray-700 rounded text-purple-300 shadow-lg translate-y-40">
+        
+            <div class="flex font-bold">
+                <h5 class="ml-8">Tasks</h5>
+                <h5 class="mx-auto">Date Created</h5>
+                <h5 class="mr-20 pr-20">Due</h5>
+            </div>
+            {% for task in tasks %}
+
+            <div class="tasks py-2">
+                <div class="border-solid border-2 border-purple-300 p-3 rounded">
+                    <a href="{{task.slug}}" class="title font-bold hover:text-white">
+                        <span>{{ task.title}}</span>
+                        <span class="fa-solid fa-door-open text-purple-300 font-bold"></span>
+                    </a>
+                    <span class="dates ml-80">{{ task.created_at }}</span>
+                    <span class="duetime float-right mr-32"><span class="fa-solid fa-circle animate-ping pr-2"></span> {{task.due | timeuntil }}</span>
+                </div>
+            </div> 
+        {% endfor %}
+    </div>
+{% endblock %}

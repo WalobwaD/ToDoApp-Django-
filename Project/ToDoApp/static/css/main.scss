@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Bebas+Neue&family=Comfortaa:wght@300;400;500;600;700&family=Rubik+Distressed&family=Silkscreen&display=swap');
+$font-1: 'Aboreto', cursive;
+$font-2: 'Bebas Neue', cursive;
+$font-3: 'Comfortaa', cursive;
+$font-4: 'Rubik Distressed', cursive;
+$font-5: 'Silkscreen', cursive;
+body{
+    background-color: aliceblue;
+    overflow-x: hidden;
+    
+    .nav{
+        font-family: $font-3;
+    }
+    .title{
+        font-family: $font-1;
+    }
+    .dates{
+        font-family: $font-1;
+    }
+    .details{
+        p{
+            font-family: $font-1;
+            font-weight: 700;
+        }
+    }
+
+}
