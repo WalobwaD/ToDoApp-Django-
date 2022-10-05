@@ -5,6 +5,8 @@ body {
 }
 body .nav {
   font-family: "Comfortaa", cursive;
+  position: fixed;
+  z-index: 10;
 }
 body .title {
   font-family: "Aboreto", cursive;
